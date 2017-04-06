@@ -1,0 +1,42 @@
+.engage-inner-image {
+    display: block;
+    margin: 0 auto 80px;
+    max-width: 100%;
+}
+
+.engage-inner-article {
+    width: 750px;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 80px;
+
+    p:not(:last-child) {
+        margin-bottom: 22px;
+    }
+}
+
+
+.engage-inner-gallery {
+    margin: 0 -40px;
+
+    .col-6 {
+        padding: 0 40px;
+    }
+
+    .gallery-item {
+        margin-bottom: 80px;
+        
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            background-size: 58px;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
