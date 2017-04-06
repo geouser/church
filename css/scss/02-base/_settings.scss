@@ -48,6 +48,14 @@ body {
       color: #fff;
     }
 
+    &.small {
+      margin-top: -17px;
+      
+      h2 {
+        font-size: 48px;
+      }
+    }
+
     h2 {
       font-size: 72px;
       font-weight: 600;
