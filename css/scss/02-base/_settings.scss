@@ -8,6 +8,7 @@ body {
 
 body {
   font-family: 'Gotham Pro';
+  font-weight: 400;
 }
 
 
@@ -17,8 +18,17 @@ body {
 	width: 1200px;
 	margin: 0 auto;
 	text-align: center;
+  &--full {
+    width: 100%;
+    padding: 0 4%;
+  }
 }
 
+h1 {
+  font-size: 100px;
+  font-family: 'Blacksword';
+  font-weight: normal;
+}
 
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);
