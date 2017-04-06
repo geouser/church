@@ -71,6 +71,14 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                SLIDERS
+    ---------------------------*/
+    $('.about-slider').slick({
+        arrows: true,
+        dots: true
+    })
+
 
     /*---------------------------
                                   Fancybox

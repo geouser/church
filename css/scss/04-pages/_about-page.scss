@@ -58,5 +58,42 @@
             }
         }
     }
-    
+
+}
+
+
+
+.about-slider {
+    padding: 0 100px;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 0!important;
+
+    .slide {
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        &__caption {
+            height: 95px;
+            @extend %vertAlign;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.025px;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 80%;
+            }
+        }
+    }
 }
