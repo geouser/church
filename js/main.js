@@ -51,38 +51,23 @@ jQuery(document).ready(function($) {
     });
 
     /*---------------------------
-                                ACTIVATE MENU ITEM OVER CURRENT SECTION
-    ---------------------------*/
-    var $sections = $('section');
-    $(window).scroll(function(){
-        var currentScroll = $(this).scrollTop();
-        var $currentSection;
-        var windowHalf = $(window).height() / 2;
-        
-        $sections.each(function(){
-          var divPosition = $(this).offset().top - windowHalf;
-          
-          if( divPosition - 1 < currentScroll ){
-            $currentSection = $(this);
-          }
-        var id = $currentSection.attr('id');
-          $('a').removeClass('active');
-          $("[href=#"+id+"]").addClass('active');
-        })
-    });
-
-    /*---------------------------
                                   MENU TOGGLE
     ---------------------------*/
     $('.menu-button').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
-        $(this).siblings('header').toggleClass('active');
-        if ($('header').hasClass('active')) {
-                $('body').css('overflow', 'hidden');
-            } else {
-                $('body').css('overflow', 'visible');
-            }
+        $('.fullNav').toggleClass('active');
+        var text = $(this).children('p').text();
+        if (text === 'Menu') {
+           $(this).children('p').text('Close');
+        } else {
+            $(this).children('p').text('Menu');
+        }
+        /*if ($('.fullNav').hasClass('active')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'visible');
+        }*/
     });
 
 
