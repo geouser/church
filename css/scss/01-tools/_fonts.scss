@@ -41,3 +41,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../fonts/GothamPro-LightItalic.eot');
+    src: url('../fonts/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamPro-LightItalic.woff') format('woff'),
+         url('../fonts/GothamPro-LightItalic.ttf') format('truetype'),
+         url('../fonts/GothamPro-LightItalic.svg#GothamPro-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
