@@ -1,0 +1,52 @@
+.blog {
+    margin-bottom: 60px;
+}
+
+.article-preview {
+    margin-bottom: 20px;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    color: #212121;
+
+    &__image {
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .content {
+        padding: 20px;
+        border: 2px solid #F4F4F4;
+        border-top: 0;
+        padding-top: 0;
+    }
+
+    &__date {
+        display: block;
+        padding-top: 36px;
+        margin: 0 0 27px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: inherit;
+        font-size: 21px;
+        font-weight: 500;
+        margin-top: 33px;
+        margin-bottom: 13px;
+        display: inline-block;
+    }
+}

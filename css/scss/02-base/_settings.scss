@@ -48,7 +48,7 @@ h1 {
 
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);
-    margin: 0 -15px;
+    margin: 0 -10px;
 
     &.flex-row-middle {
         -webkit-align-items: center;
@@ -57,7 +57,7 @@ h1 {
     }
 }
 [class*='col-'] {
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .col-1  { width: 8.33%; }
