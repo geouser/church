@@ -81,9 +81,19 @@
     @include position(absolute, 0, auto, auto, 0);
     margin: auto; 
     cursor: pointer;
-    z-index: 100;
+    z-index: 101;
     background-color: transparent;
     border: none;
+    p {
+        position: absolute;
+        left: 170%;
+        color: #FFF;
+        font-size: 18px;
+        height: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
     .menu-line {
         display: block;
         @include position(absolute, auto, 0, auto, 0);
