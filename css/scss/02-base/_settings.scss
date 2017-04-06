@@ -35,6 +35,10 @@ body {
     padding: 160px 0;
   }
 
+  &.no-padding {
+    padding: 0;
+  }
+
   &-title {
     color: #212121;
     margin-top: -27px;
