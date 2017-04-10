@@ -2,12 +2,19 @@
     background-color: #212121;
     color: #fff;
     padding: 40px 0 80px;
+    @media (max-width: 1000px) {
+        padding-bottom: 40px;
+    }
 
     &-top {
         margin-bottom: 80px;
+        @media (max-width: 1000px) {
+            margin-bottom: 20px;
+        }
     }
 
     &-logo {
+        display: inline-block;
         img {
             display: block;
             max-width: 100%;
@@ -23,15 +30,42 @@
     .col-4:nth-child(3) {
         text-align: right;
     }
+    @media (max-width: 1000px) {
+        .col-4 {
+           width: 50%;
+           margin-bottom: 20px;
+           &:last-of-type {
+               margin-bottom: 0;
+           }
+        }
+        .col-4:nth-child(1),
+        .col-4:nth-child(2),
+        .col-4:nth-child(3) {
+            text-align: center;
+        }
+    }
+    @media (max-width: 760px) {
+        .col-4 {
+           width: 100%;
+           margin-bottom: 14px;
+        }
+    }
 
     &-widget {
         display: inline-block;
         text-align: center;
+        @media (max-width: 1300px) {
+            font-size: 14px;
+        }
 
         &__title {
             font-size: 24px;
             font-weight: 500;
             margin-bottom: 10px;
+            @media (max-width: 1300px) {
+                font-size: 20px;
+                margin-bottom: 6px;
+            }
         }
 
         p,

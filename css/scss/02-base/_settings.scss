@@ -11,8 +11,18 @@ body {
   font-weight: 400;
   color: #212121;
   font-size: 18px;
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+  @media (max-width: 400px) {
+    font-size: 13px;
+  }
 }
 
+.scroll{max-height:100%;overflow:auto!important;}
 
 // lAYOUT
 // ---------------------------
@@ -37,36 +47,114 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  @media(max-width: 760px) {
+      padding: 60px 0;
+  }
+  @media(max-width: 400px) {
+      padding: 40px 0;
+  }
 
   &.big-padding {
     padding: 160px 0;
+    @media(max-width: 760px) {
+        padding: 120px 0;
+    }
   }
 
   &.no-padding {
     padding: 0;
   }
 
+  img {
+      max-width: 100%;
+  }
+
   &-title {
     color: #212121;
     margin-top: -27px;
     margin-bottom: 70px;
-
+    @media(max-width: 600px) {
+         margin-top: 0;
+     }
+    @media(max-width: 1700px) {
+      margin-bottom: 60px;
+    }
+    @media(max-width: 1500px) {
+      margin-bottom: 40px;
+    }
+    @media(max-width: 760px) {
+      margin-bottom: 20px;
+    }
     &.white {
       color: #fff;
     }
 
     &.small {
       margin-top: -17px;
-
+     @media(max-width: 600px) {
+         margin-top: 0;
+     }
       h2 {
         font-size: 48px;
+        @media(max-width: 1700px) {
+              font-size: 44px;
+          }
+          @media(max-width: 1500px) {
+              font-size: 40px;
+          }
+          @media(max-width: 1100px) {
+              font-size: 38px;
+          }
+          @media(max-width: 760px) {
+            font-size: 32px;
+          }
+          @media(max-width: 500px) {
+            font-size: 24px;
+          }
       }
     }
 
-    h2 {
+    h2,
+    h1 {
       font-size: 72px;
       font-weight: 600;
+      font-family: 'Gotham Pro';
+      letter-spacing: .025em;
+      @media(max-width: 1700px) {
+          font-size: 66px;
+      }
+      @media(max-width: 1500px) {
+          font-size: 60px;
+      }
+      @media(max-width: 1100px) {
+          font-size: 52px;
+      }
+      @media(max-width: 760px) {
+        font-size: 42px;
+      }
+      @media(max-width: 500px) {
+        font-size: 32px;
+      }
     }
+    h1 {
+      padding-bottom: 70px;
+      @media(max-width: 1700px) {
+      padding-bottom: 60px;
+    }
+        @media(max-width: 1500px) {
+          padding-bottom: 40px;
+        }
+        @media(max-width: 1100px) {
+          padding-bottom: 20px;
+        }
+    }
+  }
+}
+
+.section-title + .text-block {
+  margin-top: -40px;
+  @media (max-width: 1200px) {
+      margin-top: -10px;
   }
 }
 
@@ -74,6 +162,21 @@ h1 {
   font-size: 100px;
   font-family: 'Blacksword';
   font-weight: normal;
+  @media(max-width: 1700px) {
+    font-size: 90px;
+  }
+  @media(max-width: 1500px) {
+    font-size: 80px;
+  }
+  @media(max-width: 1100px) {
+      font-size: 72px;
+  }
+  @media(max-width: 760px) {
+    font-size: 56px;
+  }
+  @media(max-width: 500px) {
+    font-size: 48px;
+  }
 }
 
 .flex-row {
@@ -117,4 +220,41 @@ h1 {
 }
 :-moz-placeholder {
   opacity: 1;
+}
+
+.banner {
+  height: 660px;
+  @media(max-width: 1500px) {
+      height: 560px;
+  }
+  @media(max-width: 1300px) {
+      height: auto;
+      padding: 100px 0;
+  }
+  @media(max-width: 600px) {
+      padding: 60px 0;
+  }
+  .wrapper {
+    height: 100%;
+    @include flex($direction: column, $alignI: center, $justify: center);
+    p {
+      color: #FFF;
+      padding: 0 24%;
+      @media(max-width: 1500px) {
+          padding: 0 20%;
+      }
+      @media(max-width: 1100px) {
+          padding: 0 16%;
+      }
+      @media(max-width: 600px) {
+          padding: 0 10%;
+      }
+    }
+    .button {
+      margin-top: 60px;
+      @media(max-width: 1500px) {
+          margin-top: 40px;
+      }
+    }
+  }
 }

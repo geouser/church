@@ -1,5 +1,16 @@
 .blog {
     margin-bottom: 60px;
+    @media (max-width: 760px) {
+        .col-6 {
+            width: 100%;
+        }
+    }
+    @media (max-width: 800px) {
+       margin-bottom: 40px;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 20px;
+    }
 }
 
 .article-preview {
@@ -7,7 +18,14 @@
     font-size: 18px;
     letter-spacing: 0.025em;
     color: #212121;
-
+    @include transition(all, .2s);
+    &:hover {
+        -webkit-box-shadow: 0 0 20px rgba(0,0,0,.12);
+                box-shadow: 0 0 20px rgba(0,0,0,.12);
+    }
+    @media (max-width: 400px) {
+        font-size: 13px;
+    }
     &__image {
         padding: 0;
         margin: 0;
@@ -31,12 +49,24 @@
         display: block;
         padding-top: 36px;
         margin: 0 0 27px;
+        @media (max-width: 800px) {
+            padding-top: 30px;
+            margin: 0 0 20px;
+        }
+        @media (max-width: 600px) {
+            padding-top: 20px;
+            margin: 0 0 10px;
+        }
     }
 
     &__title {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 30px;
+        @media (max-width: 400px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
     }
 
     &__link {
@@ -48,5 +78,15 @@
         margin-top: 33px;
         margin-bottom: 13px;
         display: inline-block;
+        @media (max-width: 800px) {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
     }
 }

@@ -50,6 +50,14 @@ jQuery(document).ready(function($) {
         return false;
     });
 
+    $('.scroll-down').click(function() {
+        var target = $(this).parent().parent().parent().next();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 800);
+        return false;
+    });
+
     /*---------------------------
                                   MENU TOGGLE
     ---------------------------*/
@@ -84,10 +92,36 @@ jQuery(document).ready(function($) {
                                   Fancybox
     ---------------------------*/
     $('.fancybox').fancybox({
-        
+    });
+
+    $("[data-fancybox]").fancybox({
+        beforeClose: function( instance, slide ) {
+            if ($('.music-controls').hasClass('muted') ) {
+                $('.music-controls').removeClass('muted')
+                $('#background_music')[0].play();
+            }
+        }
+    });
+
+    $('[href*="www.youtube.com"]').click(function(){
+        $('.music-controls').addClass('muted');
+        $('#background_music')[0].pause();
     });
 
 
+    if ( exist('.scroll') ) {
+        $(window).on('load resize', function(event) {
+            event.preventDefault();
+            $('.scroll').mCustomScrollbar({
+                axis: 'y'
+            });
+            if ( $(window).width() < 1200 ) {
+                $('.scroll').mCustomScrollbar("destroy");
+            } else {
+                $('.scroll').mCustomScrollbar("update");
+            }
+        });
+    }
 
     /*----------------------------
                               SEND FORM

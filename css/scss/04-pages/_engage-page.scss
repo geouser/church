@@ -1,4 +1,10 @@
 .engage-block {
+    @media(max-width: 760px) {
+        margin-bottom: 20px;
+        .col-6 {
+            width: 100%;
+        }
+    }
 
     &:nth-child(2n-1) {
         .flex-row {
@@ -12,7 +18,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
-
+        @media(max-width: 760px) {
+            margin-bottom: 20px;
+        }
         &:before {
             content: '';
             width: 100%;
@@ -27,6 +35,20 @@
             font-size: 48px;
             font-weight: 600;
             margin-bottom: 65px;
+            @media(max-width: 1500px) {
+                font-size: 46px;
+                margin-bottom: 40px;
+            }
+            @media(max-width: 1100px) {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+            @media(max-width: 760px) {
+                font-size: 32px;
+            }
+            @media(max-width: 500px) {
+                font-size: 28px;
+            }
         }
 
         p {
@@ -39,10 +61,22 @@
 
         p:not(:last-of-type) {
             margin-bottom: 22px;
+            @media(max-width: 1100px) {
+                margin-bottom: 10px;
+            }
         }
 
         .button {
             margin-top: 75px;
+            @media(max-width: 1500px) {
+                margin-top: 50px;
+            }
+            @media(max-width: 1100px) {
+                margin-top: 30px;
+            }
+            @media(max-width: 500px) {
+                margin-top: 20px;
+            }
         }
     }
 }

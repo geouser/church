@@ -1,6 +1,26 @@
 .gallery {
     margin-bottom: 60px;
-
+    @media (max-width: 800px) {
+       margin-bottom: 40px;
+       margin-left: 0;
+       margin-right: 0;
+    }
+    @media (max-width: 760px) {
+        .col-3 {
+            width: 33%;
+        }
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 20px;
+        .col-3 {
+            width: 50%;
+        }
+    }
+    @media (max-width: 400px) {
+        .col-3 {
+            width: 100%;
+        }
+    }
     &-item {
         display: block;
         margin-bottom: 20px;
